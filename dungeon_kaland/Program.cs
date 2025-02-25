@@ -19,6 +19,7 @@ namespace dungeon_kaland
                 string nev = Console.ReadLine();
                 if (nev == "")
                 {
+                    Console.Clear();
                     goto nev;
                 }
                 Console.Clear();
