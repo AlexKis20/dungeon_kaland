@@ -21,9 +21,11 @@ namespace dungeon_kaland
                 {
                     goto nev;
                 }
+                Console.Clear();
                 Console.WriteLine("Történet : Egy kezdő kalandor vagy aki be lépet az első Dungeon-jébe és különböző veszély fog érni és a megfelelő döntés hozatallal túl kell" +
                     " élned és meg kell erősödnöd, ha jó döntéseket hozol akkor akár úgy is ki mehetsz a Dungeon-ből, hogy te leszel a legerősebb kalandor, de az is lehet hogy " +
                     "sose jutsz ki.");
+                Console.Clear();
                 string[] leltar = { "gyógyfőzet", "kötszer", "", "", "" };
                 string[] felszereles = { "hosszú kard", "fémpáncél" };
                 int HP = 100;
@@ -35,11 +37,11 @@ namespace dungeon_kaland
                 Console.WriteLine($"A felszerelésed: {felszereles[0]}, {felszereles[1]}");
                 Console.WriteLine($"HP: {HP}");
                 Console.WriteLine($"Sebzés: {sebzes}");
-                Console.WriteLine();
-                jobbBal:
+            jobbBal:
                 Console.WriteLine("Beléptél a dungeon-be!");
                 Console.WriteLine("Előtted két út van, melyiket választod? (jobb | bal)");
                 Console.Write($"{nev}: ");
+                Console.Clear();
                 string valaszUt = Console.ReadLine();
                 if (valaszUt.ToLower() == "jobb")
                 {
@@ -48,6 +50,7 @@ namespace dungeon_kaland
                     Console.WriteLine("Elmenekülsz, megküzdöl vagy megpróbálsz elmenni mellette (elmenekülök | megküzdök | elmegyek mellette)");
                     Console.Write($"{nev}: ");
                     string valaszGoblin = Console.ReadLine();
+                    Console.Clear();
                     if (valaszGoblin.ToLower() == "elmenekülök")
                     {
                         Console.WriteLine("Ki futottál a dungeon-ból gyáván és semmit nem szereztél, a többi kalandor kinevetett és úgy hívtak hogy gyáva életed végéig.");
@@ -66,6 +69,7 @@ namespace dungeon_kaland
                         Console.WriteLine("Tovább mentél és találsz egy ajtót. Be lépsz rajta vagy tovább mész? (be lépek | tovább megyek)");
                         Console.Write($"{nev}: ");
                         string valaszAjto = Console.ReadLine();
+                        Console.Clear();
                         if (valaszAjto.ToLower() == "be lépek")
                         {
                             Console.WriteLine("Be mentél az ajtón és bele estél egy csapdába és meghaltál!");
@@ -92,6 +96,7 @@ namespace dungeon_kaland
                             Console.WriteLine(" Most mit teszel? Megtámadod vagy ki mész a dungeonból vagy elsettenkedsz mögötte? (megtámadom | kimegyek | elsettenkedek)");
                             Console.Write($"{nev}: ");
                             string valaszOrk = Console.ReadLine();
+                            Console.Clear();
                             if (valaszOrk.ToLower() == "kimegyek")
                             {
                                 Console.WriteLine("inkább kimentél a dungeon-ból és az eddigi összegyűjtött tárgyakat eladtad és ezután be léptél a város őrségbe mert bőven elég volt ennyi kaland és inkább véded a városodat.");
@@ -120,6 +125,7 @@ namespace dungeon_kaland
                                 Console.WriteLine("Van a táskádban egy gyógyfőzet, mit teszel? Megiszod vagy nem? (megiszom | nem iszom");
                                 Console.Write($"{nev}: ");
                                 string megiszod = Console.ReadLine();
+                                Console.Clear();
                                 if (megiszod.ToLower() == "nem iszom")
                                 {
                                     Console.WriteLine("Nem ittad meg és mivel nem gyógyultál meg így elvéresztél és meghaltál!");
@@ -183,6 +189,7 @@ namespace dungeon_kaland
                         Console.WriteLine("Szeretnéd e bekötözni a sérülést? (igen | nem)");
                         Console.Write($"{nev}: ");
                         string igennem = Console.ReadLine();
+                        Console.Clear();
                         if (igennem.ToLower() == "nem")
                         {
                             Console.WriteLine("Nem kötözted be a sebedet és tovább mentél, de aközben míg mentél elfertőzött a sebed és muszáj volt ki menned a dungeon-ból és elmenned az orvoshoz.");
@@ -200,6 +207,7 @@ namespace dungeon_kaland
                             Console.WriteLine("Tovább mentél és találsz egy ajtót. Be lépsz rajta vagy tovább mész? (be lépek | tovább megyek)");
                             Console.Write($"{nev}: ");
                             string valaszAjto = Console.ReadLine();
+                            Console.Clear();
                             if (valaszAjto.ToLower() == "be lépek")
                             {
                                 Console.WriteLine("Be mentél az ajtón és bele estél egy csapdába és meghaltál!");
@@ -226,6 +234,7 @@ namespace dungeon_kaland
                                 Console.WriteLine(" Most mit teszel? Megtámadod vagy ki mész a dungeonból vagy elsettenkedsz mögötte? (megtámadom | kimegyek | elsettenkedek)");
                                 Console.Write($"{nev}: ");
                                 string valaszOrk = Console.ReadLine();
+                                Console.Clear();
                                 if (valaszOrk.ToLower() == "kimegyek")
                                 {
                                     Console.WriteLine("inkább kimentél a dungeon-ból és az eddigi összegyűjtött tárgyakat eladtad és ezután be léptél a város őrségbe mert bőven elég volt ennyi kaland és inkább véded a városodat.");
@@ -254,6 +263,7 @@ namespace dungeon_kaland
                                     Console.WriteLine("Van a táskádban egy gyógyfőzet, mit teszel? Megiszod vagy nem? (megiszom | nem iszom");
                                     Console.Write($"{nev}: ");
                                     string megiszod = Console.ReadLine();
+                                    Console.Clear();
                                     if (megiszod.ToLower() == "nem iszom")
                                     {
                                         Console.WriteLine("Nem ittad meg és mivel nem gyógyultál meg így elvéresztél és meghaltál!");
@@ -323,8 +333,8 @@ namespace dungeon_kaland
                     troll:
                     Console.WriteLine("Most mit teszel? Kiszaladsz a dungeon-ból, elosonsz mellette vagy megtámadod? (kiszaladok | elosonok | megtámadom)");
                     Console.Write($"{nev}: ");
-                    Console.WriteLine();
                     string valasztroll = Console.ReadLine();
+                    Console.Clear();
                     if (valasztroll.ToLower() == "kiszaladok")
                     {
                         Console.WriteLine("Kiszaladtál félelmedbe a dungeon-ből , mindenki úgy becézett ezek után hogy a leggyávább kalandor. Ezután gyávaként kell élned.");
@@ -346,7 +356,7 @@ namespace dungeon_kaland
                         Console.WriteLine("Mit teszel? Ott hagyod a tündért meghalni vagy megmented egy  csepp gyógyfőzettel? (ott hagyom | megmentem)");
                         Console.Write($"{nev}: ");
                         string valasztunder = Console.ReadLine();
-                        Console.WriteLine();
+                        Console.Clear();
                         if (valasztunder.ToLower() == "ott hagyom")
                         {
                             Console.WriteLine("Ott hagytad a haldokló tündért és tovább mentél de a tündér megátkozott egy halálos átokkal és 5 perc múlva megállt a szíved és meghaltál.");
@@ -376,6 +386,7 @@ namespace dungeon_kaland
                             Console.WriteLine("Most mit teszel? Haza mész, megrohamozod vagy hallkan elkúszol mellette? (haza megyek | megrohamozom | elkúszok)");
                             Console.Write($"{nev}: ");
                             string valaszkerberosz = Console.ReadLine();
+                            Console.Clear();
                             if (valaszkerberosz.ToLower() == "haza megyek")
                             {
                                 Console.WriteLine("Haza mentél, de nem gyűjtöttél semmit így pénzt nem tudtál szerezni , de csatlakoztál a templomos sereghez és hívő lettél végül nyugodt békés életet éltél");
@@ -399,6 +410,7 @@ namespace dungeon_kaland
                                 Console.Write($"{nev}: ");
                                 string valaszlada = Console.ReadLine();
                                 Console.WriteLine();
+                                Console.Clear();
                                 if (valaszlada.ToLower() == "kinyitom")
                                 {
                                     Console.WriteLine("Megpróbáltad ki nyitni de ez a láda egy mimik volt ami egy olyan szörny ami ládának álcázza magát és egészben lenyelt.");
@@ -460,7 +472,9 @@ namespace dungeon_kaland
                 }
                 vege:
                 Console.WriteLine("Kérlek írd be hogy: végszó");
+                Console.Write($"{nev}: ");
                 string vegszo = Console.ReadLine();
+                Console.Clear();
                 if (vegszo.ToLower() == "végszó")
                 {
                     Console.WriteLine("Köszönöm és gratulálok hogy végig játszottad a játékomat!");
@@ -473,6 +487,7 @@ namespace dungeon_kaland
                 Console.WriteLine();
                 Console.WriteLine("Szeretnél játszani még? ( igen(ENTER) | nem (ESC))");
                 billentyu = Console.ReadKey(true).Key;
+                Console.Clear();
             } while (billentyu != ConsoleKey.Escape);
 
 
