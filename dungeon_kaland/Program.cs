@@ -40,7 +40,7 @@ namespace dungeon_kaland
                 Console.WriteLine($"Sebzés: {sebzes}");
                 jobbBal:
                 Console.WriteLine("Beléptél a dungeon-be!");
-                Console.WriteLine("Előtted két út van, melyiket választod? (jobb | bal)");
+                Console.WriteLine("Előtted két út van, a jobb oldal sötét erőt áraszt míg a bal oldal nyugtató érzést áraszt, melyiket választod? (jobb | bal)");
                 Console.Write($"{nev}: ");
                 string valaszUt = Console.ReadLine();
                 if (valaszUt.ToLower() == "jobb")
