@@ -395,7 +395,8 @@ namespace dungeon_kaland
                             szerencse += 100;
                             Console.WriteLine($"Szerencséd megnőtt, a szerencséd szintje: {szerencse}%");
                             Console.WriteLine();
-                            Console.WriteLine("Miután a tündér elköszönt tőled találtál egy ládát amit ki is nyitottál. A ládában találtál egy páncélt és egy kardot amiknek a nevei szent páncél és szent kard volt. Nem habozva át is vetted a felszerelést és a statjaid meg is növekedtek.");
+                            Console.ResetColor();
+                            Console.WriteLine("Miután a tündér elköszönt tőled találtál egy ládát amit ki is nyitottál. A ládában találtál egy páncélt és egy kardot amiknek a nevei szent páncél és szent kard volt.\n Nem habozva át is vetted a felszerelést és a statjaid meg is növekedtek.");
                             HP += 100;
                             sebzes += 100;
                             Console.ForegroundColor = ConsoleColor.Green;
